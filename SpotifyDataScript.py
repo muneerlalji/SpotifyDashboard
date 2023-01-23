@@ -1,12 +1,11 @@
 from typing import Dict, List
 
-import pandas
 import plotly.express as px
 import spotipy
 from dash import Dash, html, dcc, Output, Input
 from spotipy.oauth2 import SpotifyOAuth
 
-import creds
+from credentials import creds
 
 scope = 'user-top-read'
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=creds.client_id,
