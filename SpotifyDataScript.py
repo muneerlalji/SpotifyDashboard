@@ -1,14 +1,17 @@
-import spotipy
-from dash import Dash, html, dcc, Output, Input
-import plotly.express as px
-
-from spotipy.oauth2 import SpotifyOAuth
 from typing import Dict, List
 
+import pandas
+import plotly.express as px
+import spotipy
+from dash import Dash, html, dcc, Output, Input
+from spotipy.oauth2 import SpotifyOAuth
+
+import creds
+
 scope = 'user-top-read'
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id='634fcd6df9d14ad5a39ca1e9cb116fd3',
-                                               client_secret='65dfd587975543f58dfda5e4b6a6e6e6',
-                                               redirect_uri='http://localhost:8888/callback',
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=creds.client_id,
+                                               client_secret=creds.client_secret,
+                                               redirect_uri=creds.redirect_url,
                                                scope=scope))
 
 
