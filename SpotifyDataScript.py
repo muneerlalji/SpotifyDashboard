@@ -21,7 +21,7 @@ def top_tracks(limit: int, time_range: str) -> Dict[str, List[str]]:
     :param time_range: the time range to query the top tracks.
     :return: a dictionary containing:
     'ttl' : the top tracks list,
-    'al': the artists list,
+    'al': the artists list,se
     'pl': the popularity list.
     """
     top_tracks_list = []
